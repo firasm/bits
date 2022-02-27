@@ -8,7 +8,7 @@ def generate(data):
     data2 = pbh.create_data2()
     
     # define or load names/items/objects from server files
-    names = pd.read_csv(data["options"]["client_files_course_path"]+"/data/names.csv")["Names"].tolist()
+    names = pbh.names.copy()
     
     # store phrases etc
     data2["params"]["vars"]["title"] = "Terminal Velocity of a Coffee Filter"
